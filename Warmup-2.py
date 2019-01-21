@@ -30,8 +30,8 @@ def string_bits_alt(str):
 """Given a non-empty string like "Code" return a string like "CCoCodCode"."""
 def string_splosion(str):
     new_str = ""
-    for i in range(len(str)):
-        new_str += str[:i + 1]
+    for i in range(len(str) + 1):
+        new_str += str[:i]
     return new_str
 
 # can be returned as a recursive function:
