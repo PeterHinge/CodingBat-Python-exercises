@@ -26,6 +26,18 @@ def lone_sum(a, b, c):
         sum -= c
     return sum
 
+# Alternative solution:
+def lone_sum(a, b, c):
+    if a == b == c:
+        return 0
+    if b == c:
+        return a
+    if a == c:
+        return b
+    if a == b:
+        return c
+    return a + b + c
+
 
 """Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards 
 the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count."""
@@ -37,7 +49,6 @@ def lucky_sum(a, b, c):
     if c == 13:
         return a + b
     return a + b + c
-
 
 # A general function with these criteria for n numbers of int values (given as a list, so len(lst) = n, where n <= 1):
 def lucky_sum_alt(lst):
