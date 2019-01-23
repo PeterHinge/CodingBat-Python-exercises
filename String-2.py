@@ -29,6 +29,15 @@ def cat_dog(str):
             dog_count += 1
     return cat_count == dog_count
 
+# A dictionary/hashtable solution:
+def cat_dog(str):
+    dic = {"cat": 0, "dog": 0}
+    for categorie in dic:
+        for i in range(len(str) - 2):
+            if str[i:i + 3] == categorie:
+                dic[categorie] += 1
+    return dic["cat"] == dic["dog"]
+
 
 """Return the number of times that the string "code" appears anywhere in the given string, 
 except we'll accept any letter for the 'd', so "cope" and "cooe" count."""
